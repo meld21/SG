@@ -1,5 +1,4 @@
 
-
 package babysitterkata;
 
 
@@ -7,7 +6,7 @@ public class EveningOfBabySitting {
     
     public boolean setStartTime(int hour, int minutes)
     {
-        if(hour == 5)
+        if(hour < 17 && hour > 3)
         {
             return false;
         }
@@ -17,4 +16,3 @@ public class EveningOfBabySitting {
         }
     }
 }
-
