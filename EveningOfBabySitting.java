@@ -13,6 +13,7 @@ public class EveningOfBabySitting {
     {
         if(hour < 17 && hour > 3)
         {
+            this.startTimeHours = -1;
             return false;
         }
         else
@@ -31,6 +32,7 @@ public class EveningOfBabySitting {
         }
         else if(hour == 4 && minutes > 0)
         {
+            this.endTimeHours = -1;
             return false;
         }
         else
