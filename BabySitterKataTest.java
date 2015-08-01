@@ -37,6 +37,10 @@ public class BabySitterKataTest {
         evening.setStartTime(11, 30);
         evening.setEndTime(23, 20);
         assertIsEqual(evening.validWorkHoursEnter(), false);
+        
+        evening.setStartTime(23, 5);
+        evening.setEndTime(23, 20);
+        assertIsEqual(evening.validWorkHoursEnter(), true);
     }
     
     private <E extends Object> void assertIsEqual(E value1, E value2)
