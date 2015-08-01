@@ -13,6 +13,12 @@ public class BabySitterKataTest {
         assertIsEqual(evening.setStartTime(1, 10), true);
     }
     
+    public void babySitterDoesNotWorkPass4AM()
+    {
+        EveningOfBabySitting evening = new EveningOfBabySitting();
+        assertIsEqual(evening.setEndTime(5, 0), false);
+    }
+    
     private <E extends Object> void assertIsEqual(E value1, E value2)
     {
         System.out.println("Tested Value : "+value1);
