@@ -18,6 +18,13 @@ public class EveningOfBabySitting {
     
     public boolean setEndTime(int hour, int minutes)
     {
-        return true;
+        if(hour == 5)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 }
