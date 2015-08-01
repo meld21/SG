@@ -31,4 +31,9 @@ public class EveningOfBabySitting {
             return true;
         }
     }
+    
+    public boolean validWorkHoursEnter()
+    {
+        return true;
+    }
 }
