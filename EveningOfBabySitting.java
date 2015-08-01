@@ -15,4 +15,9 @@ public class EveningOfBabySitting {
             return true;
         }
     }
+    
+    public boolean setEndTime(int hour, int minutes)
+    {
+        return true;
+    }
 }
