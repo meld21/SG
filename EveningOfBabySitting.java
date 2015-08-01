@@ -4,6 +4,11 @@ package babysitterkata;
 
 public class EveningOfBabySitting {
     
+    private int startTimeHours = -1;
+    private int startTimeMinutes = -1;
+    private int endTimeHours = -1;
+    private int endTimeMinutes = -1;
+    
     public boolean setStartTime(int hour, int minutes)
     {
         if(hour < 17 && hour > 3)
@@ -12,6 +17,8 @@ public class EveningOfBabySitting {
         }
         else
         {
+            this.startTimeHours = hour;
+            this.startTimeMinutes = minutes;
             return true;
         }
     }
@@ -28,12 +35,57 @@ public class EveningOfBabySitting {
         }
         else
         {
+            this.endTimeHours = hour;
+            this.endTimeMinutes = minutes;
             return true;
         }
     }
     
     public boolean validWorkHoursEnter()
     {
-        return true;
+        if(this.startTimeHours != -1 && this.endTimeHours != -1)
+        {
+            if(this.endTimeHours > 4)
+            {
+                if(this.endTimeHours > this.startTimeHours)
+                {
+                    return true;
+                }
+                if(this.endTimeHours == this.startTimeHours) 
+                {
+                    if((this.endTimeMinutes > this.startTimeMinutes))
+                    {
+                        return true;
+                    }
+                }
+            }
+            else
+            {
+                if(this.startTimeHours > 17)
+                {
+                    return true;
+                }
+                else
+                {
+                    if(this.startTimeHours < this.endTimeHours)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        if(this.startTimeHours == this.endTimeHours)
+                        {
+                            if((this.endTimeMinutes > this.startTimeMinutes))
+                            {
+                                return true;
+                            }                            
+                        }
+                    }
+                }
+            }    
     }
+    
+    return false;
+}
+    
 }
