@@ -17,6 +17,10 @@ public class BabySitterKataTest {
     {
         EveningOfBabySitting evening = new EveningOfBabySitting();
         assertIsEqual(evening.setEndTime(5, 0), false);
+        assertIsEqual(evening.setEndTime(4, 34), false);
+        assertIsEqual(evening.setEndTime(22, 15), true);
+        assertIsEqual(evening.setEndTime(1, 22), true);
+        assertIsEqual(evening.setEndTime(18, 20), true);
     }
     
     private <E extends Object> void assertIsEqual(E value1, E value2)
