@@ -12,6 +12,7 @@ public class BabySitterKata {
         
         BabySitterKataTest test = new BabySitterKataTest();
         test.babySitterDoesNotStartWorkUntil5PM();
+        test.babySitterDoesNotWorkPass4AM();
     }
     
 }
