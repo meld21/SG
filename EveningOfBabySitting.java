@@ -18,7 +18,11 @@ public class EveningOfBabySitting {
     
     public boolean setEndTime(int hour, int minutes)
     {
-        if(hour == 5)
+        if(hour < 17 && hour > 4)
+        {
+            return false;
+        }
+        else if(hour == 4 && minutes > 0)
         {
             return false;
         }
