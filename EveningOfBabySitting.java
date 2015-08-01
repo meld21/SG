@@ -1,9 +1,11 @@
+
 package babysitterkata;
 
-/**
- *
- * @author vegam_000
- */
+
 public class EveningOfBabySitting {
     
+    public boolean setStartTime(int hour, int minutes)
+    {
+        return true;
+    }
 }
